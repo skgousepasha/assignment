@@ -1,37 +1,16 @@
 <html>
-<style>
-body{
-text-align: center;
-}
-.spnLbl
-{
-width: 150px;
-}
-</style>
-<script>
-
-function CalculateBill() {
-  var totalBill =  document.getElementById("TotalBill").value;
-  var numOfPpl = document.getElementById("NoOfPpl").value;
-  var tip = document.getElementById("Tip").value;
-  tipAmount = (totalBill/numOfPpl)*(tip/100);
- 
-   document.getElementById("TipAmnt").innerHTML = tipAmount;
-  
-   document.getElementById("GrossBill").innerHTML = +totalBill +  +tipAmount;
-}
-</script>
 <head>
-
+<script type='text/javascript' src='G:/Users/yakshavalii/Desktop/Billing.js'></script>
+<link rel="stylesheet" href="G:\Users\yakshavalii\Desktop\BillingStyles.css"> 
 </head>
 <body>
 <div>
 <h2>Billing Calculator</h2>
-<P><span class="spnLbl">Total bill amount: </span><input id="TotalBill" type="number"/></p>
-<p><span class="spnLbl">Number of people:</span><input id="NoOfPpl" type="number"/></p>
+<P><span class="spnLbl">Total bill amount: </span><input id="TotalBill" type="number" min="0" oninput="validity.valid||(value='');"/></p>
+<p><span class="spnLbl">Number of people:</span><input id="NoOfPpl" type="number" min="0" oninput="validity.valid||(value='');"/></p>
 <p><span class="spnLbl">Tip amount:</span>
 <select name="TipAmount" id="Tip">
-  <option disabled selected value>Select tip amount</option>
+  <option selected value>Select tip amount</option>
   <option value="10">10%</option>
   <option value="20">20%</option>
   <option value="30">30%</option>
