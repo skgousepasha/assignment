@@ -1,4 +1,3 @@
-<script type='text/javascript'>
 function CalculateBill() {
   var totalBill =  document.getElementById("TotalBill").value;
   var numOfPpl = document.getElementById("NoOfPpl").value;
@@ -9,4 +8,3 @@ function CalculateBill() {
   
    document.getElementById("GrossBill").innerHTML = +totalBill +  +tipAmount;
 }
-</script>
